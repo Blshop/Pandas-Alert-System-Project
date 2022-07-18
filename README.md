@@ -1,12 +1,12 @@
 # Pandas-Alert-System-Project
 
   1. At start script searches given folder for csv log files and analyze them. Then it starts to monitor folder for new csv flies and when they appear immediately starts  analyzing them.
-  2. Components:
+  2. Components:<br>
     1. Folder search is based on blob module.
-    2. Event for new file is based om watchdog API:
+    2. Event for new file is based om watchdog API:<br>
       - event created when new file with csv extension created in folder.
       - then, due to the fact that watchdog doesnt have event handler for file finish copying, we wait for file last modification time stop changing, then analyze it.
-      - WORKS from docker on Linux BUT NOT on Windows.<br>
+      - WORKS from docker on Linux BUT NOT on Windows.
     3. Analysis options done via configparser module:
       - Options are stored in config.txt file.
       - There are 3 default options in DEFAULT section:
