@@ -7,7 +7,7 @@
       - event created when new file with csv extension created in folder.
       - then, due to the fact that watchdog doesnt have event handler for file finish copying, we wait for file last modification time stop changing, then analyze it.
       - WORKS from docker on Linux BUT NOT on Windows.
-    3. Analysis options done via configparser module:
+    3. Analysis options done via configparser module:<br>
       - Options are stored in config.txt file.
       - There are 3 default options in DEFAULT section:
         1. groupby - responsible for grouping data via set column "groupby = column_name"
@@ -16,7 +16,7 @@
       - Every other section can have unlimited number of columns to filter like "column_name = column value"
       - options from DEFAULT will be added to other sections if there are no such options in them.
       - Options are loaded on script start and can be easily changed or added.
-    4. logs analysis is done via pandas:
+    4. logs analysis is done via pandas:<br>
       - df is filtered for needed values
       - we add 2date columns
       - depending on groupby value we apply window function "rolling" with min max aggregation on dates. This allow us to determine time interval when given number of errors occur.
