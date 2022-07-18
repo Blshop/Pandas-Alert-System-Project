@@ -1,0 +1,9 @@
+services:
+  pandas-alert:
+    build: .\
+    volumes:
+      - ${INPUT}:/data_in
+      - ${OUTPUT}:/data_out
+    environment:
+      - INPUT_LOGS=/data_in
+      - OUTPUT_LOGS=/data_out/
